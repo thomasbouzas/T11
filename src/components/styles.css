@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: aqua;
+  
     width: 100%;
     position: fixed;
     top: 0px;
@@ -25,4 +25,13 @@
 
 .list:hover {
     background-color: white;
+}
+
+.icono {
+    float: right;
+    font-size: 2em;
+    padding: 10px;
+    color: black;
+    display: block;
+  
 }
