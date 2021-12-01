@@ -1,33 +1,31 @@
-import React, {useState} from "react";
-import "./itemstyles.css";
-import ItemCount from "./ItemCount";
-import Img from "./Img";
+import React from "react";
+import { useState, useEffect } from 'react'
+import { newProducts } from "../../products";
+import ItemList from "../ItemList/ItemList";
 
-// FUNCION CONTADOR
-const ItemListConteiner = ({sujeto}) => {
 
+const ItemListConteiner = () => {
+          const [productos, setProducto] = useState ([])
+
+          useEffect (() => {
+          const list = newProducts ()
+               list.then(list => {
+                    setProducto(list)
+               })
+
+               return (() => {
+                    setProducto([])
+               })
+     }, [])
 
      return (
-          
-         <><><div className="parent">
-
-               <div className="div1">{sujeto.nombre}</div>
-               <div className="div2">{sujeto.nombre2}</div>
-               <div className="div3">{sujeto.nombre3}</div>
-
-          </div><div className="parent">
-
-                    <div className="div1"><Img urlImagen={sujeto.urlImagen} /> </div>
-                    <div className="div2"><Img urlImagen={sujeto.urlImagen2} /></div>
-                    <div className="div3"><Img urlImagen={sujeto.urlImagen3} /></div>
-
-               </div></><ItemCount />  
-
-                         
-               </>
-
-
+          <div className="ItemListConteiner">
+               <ItemList productos={productos}/>
+          </div>
      )
+
 }
+
+
 
 export default ItemListConteiner
