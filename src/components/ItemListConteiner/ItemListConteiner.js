@@ -1,91 +1,33 @@
 import React, {useState} from "react";
 import "./itemstyles.css";
+import ItemCount from "./ItemCount";
+import Img from "./Img";
 
 // FUNCION CONTADOR
-const ItemListConteiner = () => {
+const ItemListConteiner = ({sujeto}) => {
 
-          const [count, SetCount] = useState(0)
 
-               const onClick = () => {
-    
-                     SetCount (count + 1)
+     return (
+          
+         <><><div className="parent">
 
-          }
+               <div className="div1">{sujeto.nombre}</div>
+               <div className="div2">{sujeto.nombre2}</div>
+               <div className="div3">{sujeto.nombre3}</div>
 
-          const Onclicktwo = () => {
-               if (count > 0) {
-                    SetCount (count - 1)
-               }
-          }         
+          </div><div className="parent">
 
-          const agregarCarro = () => {
+                    <div className="div1"><Img urlImagen={sujeto.urlImagen} /> </div>
+                    <div className="div2"><Img urlImagen={sujeto.urlImagen2} /></div>
+                    <div className="div3"><Img urlImagen={sujeto.urlImagen3} /></div>
 
-               if (count > 0) {
-               alert("Se agrego al carrito");
-          }
-     }
+               </div></><ItemCount />  
 
-// RETURN CODIGO HTML 
-return (
-     <>   <div className="parent">
+                         
+               </>
 
-               <div className="div1"> STOCK </div>
-                <div className="div2"> STOCK</div>
-                <div className="div3"> STOCK</div>
 
-     </div>
-          <div className="contador">
-              <div className="contadoruno">
-
-                     <button onClick={onClick}> + </button>
-                          <span> {count} </span>
-                              <button onClick={Onclicktwo}> - </button>
-
-               </div>
-
-               <div className="contradordos">
-
-                     <button onClick={onClick}> + </button>
-                          <span> {count} </span>
-                               <button onClick={Onclicktwo}> - </button>
-
-               </div>
-
-               <div className="contadortres">
-                    <button onClick={onClick}> + </button>
-                         <span> {count} </span>
-                              <button onClick={Onclicktwo}> - </button>
-
-               </div>
-
-              </div>
-              
-              
-              <div className="buy">
-
-                    <div className="buno"> 
-
-                          <button onClick={agregarCarro}> AGREGAR AL CARRITO </button>
-
-                    </div>
-
-                    <div className="bdos"> 
-
-                         <button onClick={agregarCarro}> AGREGAR AL CARRITO </button>
-
-                    </div>
-
-                    <div className="btres">
-
-                         <button onClick={agregarCarro}> AGREGAR AL CARRITO </button>
-
-                    </div>
-                    </div>
-              </>
-    )
+     )
 }
-
-
-
 
 export default ItemListConteiner
