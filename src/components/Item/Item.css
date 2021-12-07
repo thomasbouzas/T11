@@ -6,48 +6,17 @@
     background-color: gray;
     border: 1px solid black;
     border-radius: 10px;
+    margin-left: 39%;
 }
 
-.ContainerItem {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    border-radius: 15px;
+
+button {
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    font-style: oblique;
 }
 
-.ItemHeader {
-    display: flex;
-    justify-content: center;
-    font-size: 15px;
-}
-
-.Info {
-    font-size: 16px;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: space-around;
-}
-
-.Button {
-    width: auto;
-    padding: 12px;
-    font-size: 15px;
-    background: grey;
-    border-radius: 15px;
-    flex: none;
-    display: flex;
-    order: 1;
-    margin-left: 115px;
-    flex-grow: 0;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: #FFFFFF;
-    border: none;
-    border-style: none;
-    cursor: pointer;
-    outline: inherit;
-}
 
 .ItemImg {
     width: 250px;

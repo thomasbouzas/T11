@@ -1,0 +1,22 @@
+.Detalle {
+    width: 400px;
+    margin-left: 39%;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 50px;
+    background-color: gray;
+}
+
+
+li {
+    font-size: 18px;
+}
+
+p {
+    font-size: 22px;
+    font-style: oblique;
+}
+
+h4 {
+    font-style: oblique;
+}
