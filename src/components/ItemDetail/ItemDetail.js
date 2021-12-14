@@ -1,19 +1,11 @@
-import React from "react";
-import "./ItemDetail.css"
 
-const ItemDetail = ({name,precio,descripcion}) => {
-    return (
-        <div className="Detalle">
-            <h4> Lata de Coca Cola </h4>
+const ItemDetail = ({name, precio, descripcion}) => {
 
-            <p>Nombre</p> <li>{name}</li>
+  return (
 
-            <p>Precio</p><li>{precio}</li>
-
-            <p>Descripcion del Item</p><li>{descripcion}</li>
-            
-        </div>
-    )
+    // Aca escriba lo que escriba no me aparece en ningun lado, no se como solucionarlo.
+    <h2>HOLA HOLA </h2>
+  )
 }
 
 export default ItemDetail

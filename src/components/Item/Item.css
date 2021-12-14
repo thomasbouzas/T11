@@ -1,26 +1,30 @@
-.CardItem {
-    width: 400px;
-    padding: 30px;
-    margin: 30px;
-    font-size: 10px;
-    background-color: gray;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin-left: 39%;
-}
-
-
-button {
-    height: 50px;
-    width: 100px;
-    border-radius: 10px;
-    font-style: oblique;
-}
-
-
-.ItemImg {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    object-position: center;
-}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(1, 0.5fr);
+    grid-template-rows: repeat(1, 0.5fr );
+    grid-column-gap: 10px;
+    grid-row-gap: 0px;
+    justify-content: center;
+    }
+    
+    .div1 { 
+        border-radius: 25px;
+        border: 1px black solid;
+        padding: 25px;
+        background-color: grey;
+        grid-area: 1 / 1 / 1 / 1; 
+    }
+    .div2 { 
+        border-radius: 25px;
+        border: 1px black solid;
+        padding: 25px;
+        background-color: grey; 
+        grid-area: 2 / 2 / 2/ 2; 
+    }
+    .div3 {
+        border-radius: 25px;
+        border: 1px black solid;
+        padding: 25px;
+        background-color: grey; 
+        grid-area: 2 / 4 / 3 / 5;
+    }

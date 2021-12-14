@@ -1,14 +1,20 @@
 import ItemDetail from "../ItemDetail/ItemDetail"
 
 
-const ItemListDetail = ({item}) => {
-     return (
-        item.map ( (i) => 
-        
-            <ItemDetail key={i.id}  name={i.name}  precio={i.precio} url={i.url} descripcion={i.descripcion} />
-                                   
-     )
-     )
-    }
+const ItemListDetail = ({item =[]}) => {
+   
+    return (
+      item.map ( (i) =>
+        <ItemDetail id={i.id} name={i.name} url={i.url} descripcion={i.descripcion} precio={i.precio}/>
+      )
+  )
+}
+   
+   
+  
+
+
+   
+
 
 export default ItemListDetail
