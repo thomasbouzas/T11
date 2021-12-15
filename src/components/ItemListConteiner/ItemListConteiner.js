@@ -16,7 +16,9 @@ const ItemListConteiner = () => {
                return (() => {
                     setProducto([])
                })
+           
      }, [])
+
 
      return (
           <div className="ItemListConteiner">
