@@ -1,10 +1,28 @@
+import { useParams } from "react-router-dom"
+import "./ItemDetail.css"
+import ItemCount from "../ItemCount/ItemCount"
+import React, {useState} from "react";
 
-const ItemDetail = ({name, precio, descripcion}) => {
 
-  return (
+const ItemDetail = ({item}) => {
 
-    // Aca escriba lo que escriba no me aparece en ningun lado, no se como solucionarlo.
-    <h2></h2>
+ 
+
+  const addToCart = (AA) => {
+    console.log(`${AA}`)
+
+  } 
+ 
+  return (  
+<div className="CardItem">
+    <ul>
+      <h4>Producto {item.name} </h4>
+      <img src={item.url}/>
+      <p> Precio: {item.precio} </p>
+      <p> Informacion del producto: {item.descripcion} </p>
+      <ItemCount onConfirm={addToCart} />
+      </ul>
+</div>
   )
 }
 
